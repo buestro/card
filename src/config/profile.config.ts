@@ -65,7 +65,7 @@ const config: ProfileConfig = ProfileConfigSchema.parse({
     title: "Alex Rivera — Full-stack developer",
     description:
       "Full-stack developer based in San Francisco. Building tools for the web.",
-    canonical: "https://alexrivera.dev",
+    canonical: "https://card.buestro.com",
   },
 });
 

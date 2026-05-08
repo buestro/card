@@ -2,7 +2,7 @@
 
 A beautiful, themeable personal profile page. Edit one config file, deploy anywhere.
 
-**Live demo coming soon** · [Get Pro](https://buestro.com/card) · [Docs](./docs/customization.md)
+**[Live demo](https://card.buestro.com)** · [Get Pro](https://buestro.com/card) · [Docs](./docs/customization.md)
 
 ![License](https://img.shields.io/github/license/buestro/card?style=flat-square)
 ![Astro](https://img.shields.io/badge/Astro-5-FF5D01?style=flat-square&logo=astro&logoColor=white)
