@@ -1,0 +1,57 @@
+---
+import "../styles/global.css";
+import type { ProfileConfig } from "@/config/types";
+
+interface Props {
+  profile: ProfileConfig;
+}
+
+const { profile } = Astro.props;
+
+const title = profile.seo?.title ?? profile.name;
+const description =
+  profile.seo?.description ??
+  profile.bio ??
+  `${profile.name}'s personal profile page.`;
+const canonical = profile.seo?.canonical ?? Astro.site?.toString() ?? "";
+const ogImage = profile.seo?.ogImage ?? `${canonical}/og.png`;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="generator" content={Astro.generator} />
+
+    <!-- Primary meta -->
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    {canonical && <link rel="canonical" href={canonical} />}
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="profile" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    {ogImage && <meta property="og:image" content={ogImage} />}
+    {canonical && <meta property="og:url" content={canonical} />}
+
+    <!-- Twitter card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    {ogImage && <meta name="twitter:image" content={ogImage} />}
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <!-- Preconnect for Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  </head>
+  <body>
+    <main>
+      <slot />
+    </main>
+  </body>
+</html>

@@ -1,0 +1,9 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import ProfileCard from "@/components/ProfileCard.astro";
+import { profile } from "@/config/profile.config";
+---
+
+<BaseLayout profile={profile}>
+  <ProfileCard profile={profile} />
+</BaseLayout>

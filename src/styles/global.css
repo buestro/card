@@ -1,0 +1,146 @@
+/* ─────────────────────────────────────────────────────────────
+   Buestro Card — Global styles
+   ───────────────────────────────────────────────────────────── */
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap");
+@import "tailwindcss";
+
+/* ══════════════════════════════════════════════════════════════
+   THEME CUSTOMIZATION
+   Edit the values below to change the look of your card.
+   Light and dark mode are handled automatically.
+   ══════════════════════════════════════════════════════════════ */
+:root {
+  /* ── Accent color ───────────────────────────────────────────
+     Change --accent to any color you like.
+     --accent-subtle: a light tint of your accent (hover bg)
+     --accent-hover:  a darker shade for hover states
+     --accent-muted:  an even lighter tint for borders
+  ── */
+  --accent:         #10b981;
+  --accent-subtle:  #d1fae5;
+  --accent-hover:   #059669;
+  --accent-muted:   #a7f3d0;
+
+  /* ── Backgrounds ────────────────────────────────────────────
+     --bg-base:    page background
+     --bg-surface: card and input background
+     --bg-subtle:  hover backgrounds, subtle sections
+  ── */
+  --bg-base:        #f1f5f9;
+  --bg-surface:     #ffffff;
+  --bg-subtle:      #ecfdf5;
+
+  /* ── Text ───────────────────────────────────────────────────
+     --text-primary:   headings and main copy
+     --text-secondary: body text
+     --text-muted:     captions and placeholders
+  ── */
+  --text-primary:   #0d1f16;
+  --text-secondary: #1f4a32;
+  --text-muted:     #6b7280;
+
+  /* ── Borders ────────────────────────────────────────────────
+     --border-default: card and input borders
+     --border-strong:  emphasized borders
+  ── */
+  --border-default: #6ee7b7;
+  --border-strong:  #34d399;
+
+  /* ── Structural ─────────────────────────────────────────────
+     Border radius values used throughout the card.
+  ── */
+  --radius-card: 1rem;
+  --radius-pill: 9999px;
+  --radius-link: 0.5rem;
+
+  /* ── Dot grid pattern ───────────────────────────────────────
+     Dot color for the background pattern. Use a lighter value
+     to make dots more subtle, darker to make them stand out.
+  ── */
+  --dot-color:      #94a3b8;
+}
+
+/* ══════════════════════════════════════════════════════════════
+   DARK MODE OVERRIDES
+   Applied automatically when the visitor's OS is in dark mode.
+   Edit these to customize the dark variant of your theme.
+   ══════════════════════════════════════════════════════════════ */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --accent:         #34d399;
+    --accent-subtle:  #0d2e1e;
+    --accent-hover:   #10b981;
+    --accent-muted:   #113d28;
+
+    --bg-base:        #0c1510;
+    --bg-surface:     #162b1e;
+    --bg-subtle:      #1c3826;
+
+    --text-primary:   #ecfdf5;
+    --text-secondary: #a7f3d0;
+    --text-muted:     #52916e;
+
+    --border-default: #2d5a3d;
+    --border-strong:  #3d7a52;
+
+    --dot-color:      #1e3a28;
+  }
+}
+
+/* ─────────────────────────────────────────────────────────────
+   Base resets — no need to edit below this line
+   ───────────────────────────────────────────────────────────── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100dvh;
+  background-color: var(--bg-base);
+  background-image: radial-gradient(circle, var(--dot-color) 1px, transparent 1px);
+  background-size: 22px 22px;
+  color: var(--text-primary);
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+}
+
+main {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}

@@ -1,0 +1,7 @@
+<svg viewBox="0 0 32 32" width="32" height="32" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Buestro Card">
+  <title>Buestro Card</title>
+  <!-- Navy brand background -->
+  <rect width="32" height="32" rx="7" fill="#0f172a"/>
+  <!-- Buestro accent bar — brand icon-mark -->
+  <rect x="13.5" y="4" width="5" height="24" rx="2.5" fill="#2563eb"/>
+</svg>
