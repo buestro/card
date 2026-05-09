@@ -23,7 +23,7 @@ const config: ProfileConfig = ProfileConfigSchema.parse({
   // Remove this block to hide the button.
   cta: {
     label: "View résumé",
-    url: "https://alexrivera.dev/resume",
+    url: "https://buestro.com/card",
   },
 
   // ── Theme ───────────────────────────────────────────────────
@@ -40,23 +40,23 @@ const config: ProfileConfig = ProfileConfigSchema.parse({
   links: [
     {
       platform: "github",
-      url: "https://github.com/alexrivera",
-      label: "github.com/alexrivera",
+      url: "https://github.com/buestro",
+      label: "github.com/buestro",
     },
     {
       platform: "linkedin",
-      url: "https://linkedin.com/in/alexrivera",
-      label: "in/alexrivera",
+      url: "https://buestro.com",
+      label: "www.buestro.com",
     },
     {
       platform: "twitter",
-      url: "https://twitter.com/alexrivera",
-      label: "@alexrivera",
+      url: "https://x.com/buestrodev",
+      label: "@buestrodev",
     },
     {
       platform: "email",
-      url: "mailto:hello@alexrivera.dev",
-      label: "hello@alexrivera.dev",
+      url: "mailto:hello@buestro.com",
+      label: "hello@buestro.com",
     },
   ],
 
