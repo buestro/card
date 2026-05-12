@@ -21,6 +21,8 @@
   --accent-subtle:  #d1fae5;
   --accent-hover:   #059669;
   --accent-muted:   #a7f3d0;
+  /* Accessible accent for small text on light backgrounds. WCAG AA: 5.48:1 */
+  --accent-accessible: #047857;
 
   /* ── Backgrounds ────────────────────────────────────────────
      --bg-base:    page background
@@ -72,6 +74,8 @@
     --accent-subtle:  #0d2e1e;
     --accent-hover:   #10b981;
     --accent-muted:   #113d28;
+    /* Dark mode already passes at 7.81:1 — maps to standard accent */
+    --accent-accessible: #34d399;
 
     --bg-base:        #0c1510;
     --bg-surface:     #162b1e;
