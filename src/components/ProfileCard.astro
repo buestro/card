@@ -296,15 +296,25 @@ const initials = profile.name
     font-size: 0.6875rem;
     color: var(--text-muted);
     text-decoration: none;
-    opacity: 0.55;
-    transition:
-      opacity 0.15s ease,
-      color 0.15s ease;
+    transition: color 0.15s ease;
   }
 
   .attribution a:hover {
-    opacity: 1;
     color: var(--accent);
+  }
+
+  /* ── Dark mode contrast fixes (WCAG AA) ──────────────────────
+     --text-muted in dark mode falls below 4.5:1 on green-tinted
+     surfaces. Override to --text-secondary which clears 9:1+.
+  ── */
+  @media (prefers-color-scheme: dark) {
+    .tag {
+      color: var(--text-secondary);
+    }
+
+    .attribution a {
+      color: var(--text-secondary);
+    }
   }
 
   /* ── Responsive: stack on mobile ── */
