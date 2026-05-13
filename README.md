@@ -1,5 +1,7 @@
 # Buestro Card
 
+![Buestro Card banner](./public/banner.png)
+
 A beautiful, themeable personal profile page. Edit one config file, deploy anywhere.
 
 **[Live demo](https://card.buestro.com)** · [Get Pro](https://buestro.com/card) · [Docs](./docs/customization.md)
@@ -15,7 +17,7 @@ A beautiful, themeable personal profile page. Edit one config file, deploy anywh
 ## Features
 
 - Edit a single `profile.config.ts` — no HTML, no CSS required
-- Carbon Mint theme with automatic dark/light mode (follows OS)
+- Dark Mint theme with automatic dark/light mode (follows OS)
 - 12 social platform icons built in (no icon library needed)
 - Optimized for Performance, Accessibility, and SEO
 - Zero client-side JavaScript in the free version
@@ -42,6 +44,10 @@ Your card will be live at `http://localhost:4321`.
 ## Customization
 
 See [docs/customization.md](./docs/customization.md) for a full reference on changing your name, handle, bio, avatar, tags, links, and SEO settings.
+
+## Preview
+
+![Buestro Card screenshot](./docs/screenshot.png)
 
 ## Deploy
 
